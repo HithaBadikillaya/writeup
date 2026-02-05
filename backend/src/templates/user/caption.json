@@ -1,0 +1,12 @@
+{
+  "id": "caption",
+  "name": "caption",
+  "type": "caption",
+  "tone": "friendly",
+  "layout": [],
+  "global_rules": [
+    "no emojis"
+  ],
+  "prompt_instruction": "none",
+  "is_system_template": false
+}

@@ -1,4 +1,4 @@
-/*import express from "express";
+import express from "express";
 import { buildPrompt } from "../utils/promptTemplates.js";
 import { generateCaption } from "../services/hf.service.js";
 
@@ -50,4 +50,3 @@ router.post("/generate", async (req, res) => {
 });
 
 export default router;
-*/

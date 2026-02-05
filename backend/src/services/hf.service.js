@@ -1,4 +1,4 @@
-/*import { HfInference } from "@huggingface/inference";
+import { HfInference } from "@huggingface/inference";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -41,4 +41,3 @@ export async function generateCaption(prompt) {
     throw err;
   }
 }
-*/
