@@ -1,8 +1,10 @@
 "use client";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
+import FeatureCards from "../components/FeatureCards";
+import Footer from "../components/Footer";
 
-export default function Hero() {
+function HeroSection() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -23,7 +25,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
       {/* Dynamic Glow Layer */}
-      <motion.div 
+      <motion.div
         className="pointer-events-none absolute inset-0 z-0 opacity-30"
         style={{
           background: useTransform(
@@ -48,7 +50,7 @@ export default function Hero() {
                 </text>
               </mask>
             </defs>
-            
+
             {/* Base Text */}
             <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" className="font-amarna font-bold text-[180px] fill-transparent stroke-muted/20 stroke-[1px]">
               D.A.S.H
@@ -67,7 +69,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        <motion.h3 
+        <motion.h3
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -77,7 +79,7 @@ export default function Hero() {
         </motion.h3>
       </div>
 
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-10 font-mono text-xs text-muted-foreground uppercase tracking-[0.3em]"
@@ -85,5 +87,15 @@ export default function Hero() {
         Scroll to initialize
       </motion.div>
     </section>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="w-full bg-background min-h-screen overflow-x-hidden">
+      <HeroSection />
+      <FeatureCards />
+      <Footer />
+    </main>
   );
 }
